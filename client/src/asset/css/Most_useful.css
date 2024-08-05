@@ -1,0 +1,132 @@
+/* Apply global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.Most_main_page {
+  background-color: black;
+  height: auto;
+  padding-bottom: 100px;
+  text-align: center;
+  color: white; /* Ensure text is visible on dark background */
+}
+
+.Most_header_page h1 {
+  color: white;
+  padding-top: 50px;
+  font-size: 2.5rem; /* Adjusted for better readability */
+}
+
+.Most_header_page span {
+  color: red;
+}
+
+/* Flex container for books */
+.main_books_div {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  justify-content: center;
+  gap: 30px; /* Add space between items */
+  padding: 20px; /* Add padding around the flex container */
+}
+
+/* Book box styling */
+.books_box {
+  background-color: white;
+  width: 20%; /* Fixed width for consistency */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Ensure content doesn't overflow */
+  transition: transform 0.3s ease-out;
+}
+
+.shortbox{
+  height: 25.4rem;
+  
+}
+
+/* Book image styling */
+.books_book_image {
+  position: relative;
+}
+
+.books_book_img img {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  transform-origin: 0 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  width: 55%;
+  height: 200px;
+}
+
+/* Rotate image on hover */
+.books_book_img:hover img {
+  transform: rotate(-10deg);
+}
+
+/* Book details styling */
+.books_details {
+  background-color: #b6b2b1;
+  padding: 20px;
+  text-align: center; /* Center text in details */
+}
+
+.books_details h4 {
+  font-weight: 500;
+  font-size: 1.25rem; /* Adjusted for readability */
+  margin-bottom: 10px; /* Space below title */
+  color: black;
+}
+
+.books_details p {
+  color: rgb(41, 166, 41);
+  font-weight: 500;
+  font-size: 1.5rem; /* Adjusted for readability */
+  margin: 10px 0;
+}
+
+.books_details button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem; /* Adjusted for consistency */
+  background-color: black;
+ position: relative; 
+}
+.books_details a{
+  color: white ;
+
+}
+.books_details button:hover {
+  background-color: rgba(0, 0, 0, 0.655);
+}
+
+.books_details button i {
+  margin-left: 10px;
+  transition: transform 0.3s ease-out;
+}
+
+.books_details button:hover i {
+  transform: translateX(10px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main_books_div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .books_box {
+    width: 90%;
+  }
+}
